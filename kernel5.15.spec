@@ -135,23 +135,13 @@
 # END OF FLAVOURS
 %endif
 
-# build perf and cpupower tools
-%if 0%{relc}
+# Don't build perf and cpupower tools for compat packages
 # One version of bpf and perf is enough - let's build it for stable only
 %bcond_with perf
 %bcond_with bpftool
-%else
-%bcond_without perf
-%bcond_without bpftool
-%endif
-%bcond_without build_x86_energy_perf_policy
-%bcond_without build_turbostat
-%ifarch %{ix86} %{x86_64}
-%bcond_without build_cpupower
-%else
-# cpupower is currently x86 only
+%bcond_with build_x86_energy_perf_policy
+%bcond_with build_turbostat
 %bcond_with build_cpupower
-%endif
 
 # ARM builds
 %ifarch %{armx}
