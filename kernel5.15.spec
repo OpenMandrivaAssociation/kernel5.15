@@ -1502,6 +1502,7 @@ $DevelRoot/include/vdso
 $DevelRoot/include/video
 $DevelRoot/include/xen
 $DevelRoot/init
+$DevelRoot/io_uring
 $DevelRoot/ipc
 $DevelRoot/kernel
 $DevelRoot/lib
@@ -1966,6 +1967,7 @@ cd -
 %{_kerneldir}/include/video
 %{_kerneldir}/include/xen
 %{_kerneldir}/init
+%{_kerneldir}/io_uring
 %{_kerneldir}/ipc
 %{_kerneldir}/kernel
 %{_kerneldir}/lib
